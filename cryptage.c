@@ -9,9 +9,7 @@ char * decryptage (char *input) {
         printf("Memory allocation failed\n");
     }
 
-
-
-    for(int i=0; i < input[i] != '\0'; i++){
+    for(int i=0; input[i] != '\0'; i++){
         decrypted [i] = input[i] - 3;
     }
     decrypted[strlen(input)] = '\0';
@@ -22,6 +20,7 @@ char * decryptage (char *input) {
 int main(int argc, char const *argv[])
 {
     char *input;
+    
     printf("entrer crypted value: ");
     scanf("%s",input);
 
