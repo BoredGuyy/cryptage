@@ -21,9 +21,11 @@ char *decryptage(char *input)
     return decrypted;
 }
 
+
 char *cryptage(char *string)
 {
     char *arr = (char *)malloc(strlen(string) + 1);
+
 
     if (arr == NULL)
     {
@@ -42,24 +44,17 @@ char *cryptage(char *string)
 
 int main(int argc, char const *argv[])
 {
-    char *input = (char *)malloc(100);
-    if (input == NULL)
-    {
-        printf("Memory allocation failed\n");
-        return 1;
-    }
 
-    printf("Enter value: ");
-    scanf("%s", input);
-
+    char *input = (char*)malloc(100);
+    
+    printf("entrer value: ");
+    scanf("%s",input);
+  
     char *crypted = cryptage(input);
-    if (crypted != NULL)
-    {
-        printf("String after cryptage: %s\n", crypted);
-    }
-
     char *decrypted = decryptage(crypted);
-    printf("Decrypted value: %s", decrypted);
+    printf("String before cryptage: %s\n", crypted);
+    printf("decrypted value: %s",decrypted);
+
 
     free(input);
     free(crypted);
